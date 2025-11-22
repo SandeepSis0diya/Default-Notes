@@ -125,7 +125,7 @@ Group Enumeration
 
 
 
-MATCH (u:User)-[:MemberOf*1..]->(g:Group {name:'DOMAIN ADMINS@POSEIDON.YZX'}) RETURN u
+            MATCH (u:User)-[:MemberOf*1..]->(g:Group {name:'DOMAIN ADMINS@POSEIDON.YZX'}) RETURN u
 
 
 
@@ -133,7 +133,7 @@ MATCH (u:User)-[:MemberOf*1..]->(g:Group {name:'DOMAIN ADMINS@POSEIDON.YZX'}) RE
 
 
 
-MATCH (u:User)-[:MemberOf*1..]->(g:Group)-[:ExecuteDCsync]->(d:Domain) RETURN u,g,d
+            MATCH (u:User)-[:MemberOf*1..]->(g:Group)-[:ExecuteDCsync]->(d:Domain) RETURN u,g,d
 
 
 
@@ -141,7 +141,7 @@ MATCH (u:User)-[:MemberOf*1..]->(g:Group)-[:ExecuteDCsync]->(d:Domain) RETURN u,
 
 
 
-MATCH (d1:Domain)-[r:TrustedBy]->(d2:Domain) RETURN d1,d2,r
+            MATCH (d1:Domain)-[r:TrustedBy]->(d2:Domain) RETURN d1,d2,r
 
 
 
@@ -153,7 +153,7 @@ ACL Enumeration
 1. List all ACLs:
 
 
-MATCH (n)-[r:HasControl|GenericAll|Owns]->(m) RETURN n.name, type(r), m.name
+            MATCH (n)-[r:HasControl|GenericAll|Owns]->(m) RETURN n.name, type(r), m.name
 
 
 2. Find users with GenericAll on specific objects:
