@@ -4,6 +4,8 @@ sudo git clone https://github.com/net-snmp/net-snmp.git
 
 <img width="1270" height="841" alt="image" src="https://github.com/user-attachments/assets/bc6b36c4-6e2e-4d80-8a68-927290b17ad0" />
 
+***Configuration process***
+
 
 
 
@@ -26,8 +28,8 @@ sudo git clone https://github.com/net-snmp/net-snmp.git
 
 <img width="1318" height="716" alt="image" src="https://github.com/user-attachments/assets/5e2abfac-f744-46b2-ac5c-c1233226e8a1" />
 
-
-      
+***Commands***
+     
       snmpwalk -v2c -c public 192.168.202.149 NET-SNMP-EXTEND-MIB::nsExtendObjects
 
       
