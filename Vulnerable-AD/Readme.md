@@ -1,29 +1,37 @@
-✅ STEP 1 — Create the user sqlsvc
-In Active Directory Users and Computers:
+### 🛠️ Step 1 — Create the sqlsvc User in Active Directory
 
-Open Server Manager → Tools → Active Directory Users and Computers
+#### Follow the steps below to create a dedicated SQL service account in Active Directory.
 
-Go to Users
+##### ✔️ Create the SQL Service Account (sqlsvc)
 
-Right-click → New → User
+##### Open Server Manager
+#### → Navigate to Tools
+#### → Select Active Directory Users and Computers.
 
-Fill details:
+##### In the left panel, expand your domain and click on Users.
 
-First name: SQL
+#### Right-click inside the Users pane and select:
+#### New → User
 
-Last name: Service
+#### Fill in the required details:
 
-User logon name: sqlsvc
+#### Field	Value
+#### First Name	SQL
+#### Last Name	Service
+#### User logon name	sqlsvc
 
-Password: Password@123
+#### Click Next, then set the password:
 
-Check:
+### Password: Password@123
 
-✔ Password never expires
 
-❌ Do NOT check “User must change password”
+#### Configure password options:
 
-Click Finish.
+#### ✔️ Password never expires
+
+#### ❌ User must change password at next logon (leave unchecked)
+
+#### Click Finish to create the user.
 
 <img width="1053" height="483" alt="image" src="https://github.com/user-attachments/assets/19c5af51-a6fe-40af-995f-cbbf94d7b075" />
 
@@ -33,9 +41,27 @@ Click Finish.
 <img width="680" height="454" alt="image" src="https://github.com/user-attachments/assets/f6cd50f9-083f-466a-83ba-64d4b4ff7bf7" />
 <br>
 
+### 🔥 STEP 2 — Assign the SPN to sqlsvc
+
+After creating the service account, assign the SQL Server SPN using setspn.
+
+### ▶️ Command
+    setspn -A MSSQLSvc/Infosec.sandeep.local:1433 sqlsvc
+
+✅ Expected Output
+Registered ServicePrincipalNames for CN=sqlsvc, CN=Users, DC=sandeep, DC=local
+
 <img width="652" height="92" alt="image" src="https://github.com/user-attachments/assets/746788bc-6807-4e6a-bbb2-a064815d74a7" />
 <br>
+### 🔎 STEP 3 — Verify the SPN
 
+Run the following command to confirm the SPN is properly registered:
+
+### ▶️ Command
+    setspn -L sqlsvc
+
+✅ Expected Output
+MSSQLSvc/Infosec.sandeep.local:1433
 
 <img width="660" height="91" alt="image" src="https://github.com/user-attachments/assets/78ce35e2-a542-4371-abdf-8ee4a7db0dde" />
 
