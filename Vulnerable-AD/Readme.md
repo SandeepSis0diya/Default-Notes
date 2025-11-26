@@ -81,5 +81,18 @@ $krb5tgs$23$*sqlsvc$SANDEEP.LOCAL*...
 
 <img width="955" height="326" alt="image" src="https://github.com/user-attachments/assets/4ea6e10c-7ed2-4399-8419-7ed22273c63e" />
 
+<img width="1335" height="470" alt="image" src="https://github.com/user-attachments/assets/b92ace06-be0b-4e87-8273-87ceb4ec1a3a" />
+
+Write owner to Management group
+
+    dsacls "CN=Management,CN=Users,DC=sandeep,DC=local" /G "sandeep\sqlsvc:WO"
+
+
+Generic write on leo
+
+    dsacls "CN=leo,CN=Users,DC=sandeep,DC=local" /G "sandeep\Management:GW"
+
+
+
 
 
