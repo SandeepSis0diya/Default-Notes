@@ -15,14 +15,14 @@
 
 #### Fill in the required details:
 
-#### Field	Value
-#### First Name	SQL
-#### Last Name	Service
-#### User logon name	sqlsvc
-
-#### Click Next, then set the password:
-
-### Password: Password@123
+        Field	Value
+        First Name	SQL
+        Last Name	Service
+        User logon name	sqlsvc
+        
+        Click Next, then set the password:
+    
+        Password: Password@123
 
 
 #### Configure password options:
