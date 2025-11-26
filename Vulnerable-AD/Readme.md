@@ -102,9 +102,18 @@ Generic write on leo
     dsacls "CN=leo,CN=Users,DC=sandeep,DC=local" /G "sandeep\Management:GW"
 
 
-hide harry password in powershell history
+### hide peter password in powershell history
 
-      "harry - harry12123" | Add-Content "C:\Users\peter\AppData\Roaming\Microsoft\PowerShell\PSReadline\ConsoleHost_history.txt"
+     Create the missing folders manually (recommended)
+
+Run this inside Evil-WinRM:
+
+    New-Item -ItemType Directory -Path "C:\Users\peter\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline" -Force
+
+
+Then write the fake credential:
+
+    "harry - harry12123" | Add-Content "C:\Users\peter\AppData\Roaming\Microsoft\Windows\Power
 
 
 
