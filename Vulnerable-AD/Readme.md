@@ -104,7 +104,8 @@ Generic write on leo
 
 hide harry password in powershell history
 
-       "harry - harry12123" | Add-Content "C:\Users\leo\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ServerRemoteHost_history.txt"
+      "harry - harry12123" | Add-Content "C:\Users\peter\AppData\Roaming\Microsoft\PowerShell\PSReadline\ConsoleHost_history.txt"
+
 
 
 
