@@ -115,6 +115,18 @@ Then write the fake credential:
 
     "harry - harry12123" | Add-Content "C:\Users\peter\AppData\Roaming\Microsoft\Windows\Power
 
+<img width="1304" height="68" alt="image" src="https://github.com/user-attachments/assets/6b393c9b-35e7-4fc7-a707-f69f431c0b31" />
+
+<br>
+
+    harry - harry12123
+    peter - peter12123
+
+Harry Is Member of Rdp group So that it cn make remote desktop connection
+
+
+
+
 
 
 
