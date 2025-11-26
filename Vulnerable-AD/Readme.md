@@ -83,6 +83,11 @@ $krb5tgs$23$*sqlsvc$SANDEEP.LOCAL*...
 
 <img width="1335" height="470" alt="image" src="https://github.com/user-attachments/assets/b92ace06-be0b-4e87-8273-87ceb4ec1a3a" />
 
+
+Create new Group Management 
+
+    New-ADGroup -Name "Management" -GroupScope Global -GroupCategory Security
+    
 Write owner to Management group
 
     dsacls "CN=Management,CN=Users,DC=sandeep,DC=local" /G "sandeep\sqlsvc:WO"
@@ -91,6 +96,11 @@ Write owner to Management group
 Generic write on leo
 
     dsacls "CN=leo,CN=Users,DC=sandeep,DC=local" /G "sandeep\Management:GW"
+
+
+hide harry password in powershell history
+
+       "harry - harry12123" | Add-Content "C:\Users\leo\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ServerRemoteHost_history.txt"
 
 
 
