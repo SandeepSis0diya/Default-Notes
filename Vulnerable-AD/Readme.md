@@ -100,10 +100,12 @@ sqlsvc get Write owner to Management group
 
 
 
-Generic write on leo
+Generic write on peter
 
     dsacls "CN=peter,CN=Users,DC=sandeep,DC=local" /G "sandeep\Management:GW"
-
+<br>
+<img width="990" height="160" alt="image" src="https://github.com/user-attachments/assets/000da746-9c95-4d0c-ba99-2f62c482560c" />
+    
 
 ### hide peter password in powershell history
 
