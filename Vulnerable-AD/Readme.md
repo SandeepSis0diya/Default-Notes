@@ -248,10 +248,11 @@ To apply changes immediately:
 
 ```powershell
 gpupdate /force
+```
 
-   
+Harry Is Member of Rdp and winrm group So that it cn make remote desktop connection
 
-### Harry Is Member of Rdp and winrm group So that it cn make remote desktop connection
+Reference:https://github.com/InfoSecWarrior/Offensive-Pentesting-Lab/tree/8f174e97025bf1075e4fb4ecd6dbfd3a639a27d7/AD-DACL
 
 
 
