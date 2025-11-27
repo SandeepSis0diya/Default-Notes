@@ -173,6 +173,58 @@ $krb5tgs$23$sqlsvc$SANDEEP.LOCAL...
                 
      harry - iamvery@close129129
 
+
+# 🛠️ Manual GUI Guide: Grant **SeImpersonatePrivilege** to User **harry**
+
+---
+
+### 🔹 Step 1: Open Local Security Policy
+
+- Press **Windows Key + R** to open the Run dialog.  
+- Type `secpol.msc` and press **Enter**.  
+- This opens the **Local Security Policy** management console.
+
+---
+
+### 🔹 Step 2: Navigate to User Rights Assignment
+
+- In the left pane, expand **Local Policies**.  
+- Click on **User Rights Assignment**.
+
+---
+
+### 🔹 Step 3: Find “Impersonate a client after authentication”
+
+- In the right pane, scroll and find the policy named **“Impersonate a client after authentication”**.  
+- Double-click on it to open its properties.
+
+---
+
+### 🔹 Step 4: Add User **harry** to the Policy
+
+- Click **Add User or Group...**  
+- In the text box, type `harry`.  
+- Click **Check Names** to verify the user.  
+- Click **OK**.  
+- Click **Apply**, then **OK**.
+
+---
+
+### 🔹 Step 5: Close Local Security Policy
+
+- Close the **Local Security Policy** window.
+
+---
+
+### 🔹 Step 6: Refresh Policy
+
+To apply changes immediately:  
+- Restart the machine **OR**  
+- Run this command in an elevated Command Prompt or PowerShell:
+
+```powershell
+gpupdate /force
+
    
 
 ### Harry Is Member of Rdp and winrm group So that it cn make remote desktop connection
