@@ -37,10 +37,10 @@ Run the following PowerShell scripts **in this exact order** to build the vulner
 
 Run the following commands in an **elevated Command Prompt** (Run as Administrator) on the target machine to add users `harry`, `peter`, and `sqlsvc` to the **Remote Management Users** local group:
 
-```cmd
-net localgroup "Remote Management Users" harry /add
-net localgroup "Remote Management Users" peter /add
-net localgroup "Remote Management Users" sqlsvc /add
+
+        net localgroup "Remote Management Users" harry /add
+        net localgroup "Remote Management Users" peter /add
+        net localgroup "Remote Management Users" sqlsvc /add
 
 
 
