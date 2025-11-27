@@ -99,7 +99,7 @@ sqlsvc get Write owner to Management group
 
 Generic write on leo
 
-    dsacls "CN=leo,CN=Users,DC=sandeep,DC=local" /G "sandeep\Management:GW"
+    dsacls "CN=peter,CN=Users,DC=sandeep,DC=local" /G "sandeep\Management:GW"
 
 
 ### hide peter password in powershell history
