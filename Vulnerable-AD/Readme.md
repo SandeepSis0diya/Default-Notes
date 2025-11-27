@@ -15,7 +15,21 @@ Run the following PowerShell scripts **in this exact order** to build the vulner
 | 3️⃣    | `Create-AD-Users.ps1`       | Create domain users, groups, OUs, and objects needed for lab. |
 | 4️⃣    | `Setup-ACL-AutoTask.ps1`    | Setup weak ACL permissions and scheduled tasks to persist them.|
 
+
 ---
+## ⚪ Whitebox / Assumed Breach Scenario
+
+In this lab, we assume a **whitebox** or **assumed breach** scenario where some credentials are already publicly known or leaked.
+
+### Public Credential:
+
+| Username | Password     |
+|----------|--------------|
+| charlie  | Password@123 |
+
+> 🔐 **Note:**  
+> The credential for user **charlie** is intentionally made public in this lab to simulate a real-world scenario where attackers have access to leaked or weak credentials. Use this credential to practice lateral movement, privilege escalation, and other attack techniques.
+
 ## After Follow this steps
 
 ###  ▶️  Run this command to off defender
